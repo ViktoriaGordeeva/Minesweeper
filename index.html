@@ -10,38 +10,46 @@
 </head>
 
 <body onload="init()">
-<div class="gameName">
-    <h1>Minesweeper</h1>
-</div>
-<div class="attributes">
-    <div class="lifes">
-        <span id="life-1"></span>
-        <span id="life-2"></span>
-        <span id="life-3"></span>
+    <div class="gameName">
+        <h1>Minesweeper</h1>
     </div>
-    <button onClick="restart()">😃</button>
-    <div class="timer">0</div>
-</div>
-<div class="levels">
-    <label>
-        <input name="level" type="radio" value="beginner" onclick="setLevel(value)" checked>
-        Beginner
-    </label>
-    <label>
-        <input name="level" type="radio" value="medium" onclick="setLevel(value)">
-        Medium
-    </label>
-    <label>
-        <input name="level" type="radio" value="expert" onclick="setLevel(value)">
-        Expert
-    </label>
-</div>
-<div class="board-container"></div>
-<div hidden class="popup">
-    <h2></h2>
-</div>
-<script src="js/utils.js"></script>
-<script src="js/main.js"></script>
+    <div class="attributes">
+        <div class="lifes">
+            <span id="life-1"></span>
+            <span id="life-2"></span>
+            <span id="life-3"></span>
+        </div>
+        <button onClick="restart()">😃</button>
+        <div class="timer">0</div>
+    </div>
+    </div>
+    <div class="levels">
+        <label>
+            <input name="level" type="radio" value="beginner" onclick="setLevel(value)" checked>
+            Beginner
+        </label>
+        <label>
+            <input name="level" type="radio" value="medium" onclick="setLevel(value)">
+            Medium
+        </label>
+        <label>
+            <input name="level" type="radio" value="expert" onclick="setLevel(value)">
+            Expert
+        </label>
+    </div>
+    <div class="board-container"></div>
+    <div class="hints"></div>
+    <div hidden class="popup">
+        <button onClick="closePopup()">X</button>
+        <h2></h2>
+        <div hidden class="storage">
+            <h3>Enter your name:</h3>
+            <input onchange='sendToStorage(this.value)'></input>
+        </div>
+    </div>
+    <div class="result"></div>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
