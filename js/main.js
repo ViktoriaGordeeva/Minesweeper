@@ -339,4 +339,5 @@ function sendToStorage(value) {
             localStorage.scoreExpert = gGame.secsPassed;
             break;
     }
+    document.querySelector('.storage').hidden = true;
 }
