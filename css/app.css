@@ -3,7 +3,8 @@ body {
   background-image: url('../img/field.jpg');
   background-repeat: repeat-y;
   background-size: cover;
-  font-family: "Century Schoolbook", Georgia, Times, serif;;
+  font-family: "Century Schoolbook", Georgia, Times, serif;
+  cursor: default;
  
 }
 .gameName {
@@ -34,6 +35,19 @@ h1 {
   border-radius: 10%;
 }
 
+.hints {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  width: 150px;
+  line-height: 45px;
+  background-color: rgba(255, 255, 255, 0.418);
+  border-radius: 10%;
+}
+.hints span:hover {
+  background-color: rgba(61, 145, 86, 0.384);
+}
+
 .timer{
   line-height: 45px;
   color:  #333;
@@ -52,35 +66,6 @@ button:hover {
 
 }
 
-.board-container {
-  display: grid;
-  justify-content: space-evenly;
-}
-
-td {
-  background-color: rgb(192, 190, 190);
-  width: 35px;
-  height: 35px;
-  text-align: center;
-  font-size: 1em;
-  cursor: default;
-}
-
-td:hover {
-  background-color: rgb(175, 173, 173);
-}
-
-.popup {
-  background-color: #ffa600d7;
-  border-radius: 10%;
-  border: 2px solid #ca3115d7;
-  padding: 50px;
-  position: absolute;
-  right: 40%;
-  top: 30%;
-  color:  #333;
-}
-
 .levels {
   padding-bottom: 20px;
   display: inline-block;
@@ -93,4 +78,50 @@ label {
 label:hover {
 font-size: 15px;
 font-weight: bolder;
+}
+
+.board-container {
+  display: grid;
+  justify-content: space-evenly;
+}
+
+td {
+  background-color: rgb(192, 190, 190); 
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 1em;
+}
+
+td:hover {
+  background-color: rgb(175, 173, 173);
+}
+
+.popup {
+  min-width: 150px;
+  min-height: 100px;
+  background-color: #ffa600d7;
+  border-radius: 10%;
+  border: 2px solid #ca3115d7;
+  padding: 10px 10px 50px 10px;
+  position: absolute;
+  right: 40%;
+  top: 30%;
+  color:  #333;
+}
+
+.popup button {
+  margin-left:80%;
+  width: 20px;
+  line-height:20px;
+  border: 0px;
+}
+
+.result {
+  font-weight: bold;
+
+}
+
+.result span {
+  font-style: italic;
 }
